@@ -33,6 +33,35 @@ namespace AppServicioEntregaDePaquetes.Modelo
         }
         #endregion
 
+        #region "Metodos Sobreescritos"
+
+         public override string ToString()
+         {
+             return "Cuota Fija de Envio: $" + this.cuotaFija;
+         }
+
+         public override bool Equals(object obj)
+         {
+             TwoDaysPackage p2 = (TwoDaysPackage)obj;
+             bool result = false;
+             if (this.cuotaFija == p2.cuotaFija)
+                 result = true;
+             return result;
+         }
+
+         public override int GetHashCode()
+         {
+             return this.ToString().GetHashCode();
+         }
+        #endregion
+
+        #region "Metodos"
+        
+       
+        
+        #endregion
+
+
 
 
 
