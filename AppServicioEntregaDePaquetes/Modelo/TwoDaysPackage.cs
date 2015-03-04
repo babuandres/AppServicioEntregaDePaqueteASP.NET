@@ -57,8 +57,6 @@ namespace AppServicioEntregaDePaquetes.Modelo
 
         #region "Metodos"
         
-       
-        
         #endregion
 
 
