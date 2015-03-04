@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AppServicioEntregaDePaquetes.Modelo.Package">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAEAAgQRAIICEkCAAyBgAAEAIAIAAAAAAAAQAAEA=</HashCode>
+      <FileName>Modelo\Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppServicioEntregaDePaquetes.Modelo.TwoDaysPackage">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAEAAAEgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelo\TwoDaysPackage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
