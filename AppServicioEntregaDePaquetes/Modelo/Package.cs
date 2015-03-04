@@ -14,7 +14,10 @@ namespace AppServicioEntregaDePaquetes.Modelo
         private string ciudad;        
         private string departamento;        
         private string codigoPostalRemitente;        
-        private string codigoPostalDestinatario;        
+        private string codigoPostalDestinatario;
+        private double peso;          
+        private double costoPorGr;
+        private double valorTotal;        
         #endregion
 
         #region "Propiedades"
@@ -59,6 +62,24 @@ namespace AppServicioEntregaDePaquetes.Modelo
             get { return codigoPostalDestinatario; }
             set { codigoPostalDestinatario = value; }
         }
+
+        public double Peso
+        {
+            get { return peso; }
+            set { peso = value; }
+        }      
+
+        public double CostoPorGr
+        {
+            get { return costoPorGr; }
+            set { costoPorGr = value; }
+        }
+
+        public double ValorTotal
+        {
+            get { return valorTotal; }
+            set { valorTotal = value; }
+        }
         #endregion
 
         #region "Constructores"
@@ -74,12 +95,16 @@ namespace AppServicioEntregaDePaquetes.Modelo
             this.departamento = "Despartamento Destino";
             this.codigoPostalRemitente = "Código postal Remitente";
             this.codigoPostalDestinatario = "Código Postal Destinatario";
+            this.peso = 0.0;
+            this.costoPorGr = 0.0;
+            this.valorTotal = 0.0;
+            
         }
         ///<summary>
         ///Contructor de inicialización de Personas
         ///</summary>
         ///
-        public Package(string codigo, string nombre, string direccion, string ciudad, string departamento, string codigoPostalRemitente,string codigoPostalDestinatario) {
+        public Package(string codigo, string nombre, string direccion, string ciudad, string departamento, string codigoPostalRemitente,string codigoPostalDestinatario, double peso, double costoPorGr, double valorTotal) {
             this.codigo = codigo;
             this.nombre = nombre;
             this.direccion = direccion;
@@ -87,7 +112,10 @@ namespace AppServicioEntregaDePaquetes.Modelo
             this.departamento = departamento;
             this.codigoPostalRemitente = codigoPostalRemitente;
             this.codigoPostalDestinatario = codigoPostalDestinatario;
-        
+            this.peso = peso;
+            this.costoPorGr = costoPorGr;
+            this.valorTotal = valorTotal;
+           
         }
         #endregion
 
@@ -100,9 +128,12 @@ namespace AppServicioEntregaDePaquetes.Modelo
                      "Direccion Destino: " + this.direccion + "\n" +
                      "Ciudad Destino: " + this.ciudad + "\n" +
                      "Departamento: " + this.departamento + "\n" +
-                     "Codigo Postal del Remitente" + this.codigoPostalRemitente + "\n" +
-                     "Codigo Postal del Destinanatio" + this.codigoPostalDestinatario;
-        }
+                     "Codigo Postal del Remitente: " + this.codigoPostalRemitente + "\n" +
+                     "Codigo Postal del Destinanatio: " + this.codigoPostalDestinatario + "\n" +
+                     "Peso: " + this.peso + "Kg" + "\n" +
+                     "Costo por Kg: $" + this.costoPorGr + "\n" +
+                     "Valor Total del Envio: $" + this.valorTotal;
+                     }
 
         public override bool Equals(object obj)
         {
@@ -123,6 +154,13 @@ namespace AppServicioEntregaDePaquetes.Modelo
         public override int GetHashCode()
         {
             return this.ToString().GetHashCode();
+        }
+        #endregion
+
+        #region"Metodos"
+        public void calculateCost()
+        {
+            this.valorTotal = this.peso * this.costoPorGr;
         }
 
         #endregion
