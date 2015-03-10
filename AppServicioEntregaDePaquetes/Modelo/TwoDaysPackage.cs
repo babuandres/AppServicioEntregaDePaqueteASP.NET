@@ -56,7 +56,10 @@ namespace AppServicioEntregaDePaquetes.Modelo
         #endregion
 
         #region "Metodos"
-        
+         public void calculateCost()
+         {
+             this.ValorTotal = this.Peso * this.CostoPorGr + this.cuotaFija;
+         }
         #endregion
 
 
