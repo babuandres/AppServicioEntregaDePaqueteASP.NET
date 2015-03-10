@@ -9,10 +9,26 @@ namespace AppServicioEntregaDePaquetes.Modelo
     {
         #region "Atributos"
         private string codigo;       
-        private string nombre;        
-        private string direccion;        
-        private string ciudad;        
-        private string departamento;        
+        private string nombreRemitente;
+        private string nombreDestinatario;
+
+        
+        private string direccionRemitente;
+        private string direccionDestinatario;
+
+        
+        private string ciudadRemitente;
+        private string ciudadDestinatario;
+
+        
+        private string departamentoRemitente;
+        private string departamentoDestinatario;
+
+        public string DepartamentoDestinatario
+        {
+            get { return departamentoDestinatario; }
+            set { departamentoDestinatario = value; }
+        }
         private string codigoPostalRemitente;        
         private string codigoPostalDestinatario;
         private double peso;          
@@ -27,28 +43,46 @@ namespace AppServicioEntregaDePaquetes.Modelo
             set { codigo = value; }
         }
 
-        public string Nombre
+        public string NombreRemitente
         {
-            get { return nombre; }
-            set { nombre = value; }
+            get { return nombreRemitente; }
+            set { nombreRemitente = value; }
         }
 
-        public string Direccion
+        public string NombreDestinatario
         {
-            get { return direccion; }
-            set { direccion = value; }
+            get { return nombreDestinatario; }
+            set { nombreDestinatario = value; }
         }
 
-        public string Ciudad
+        public string DireccionRemitente
         {
-            get { return ciudad; }
-            set { ciudad = value; }
+            get { return direccionRemitente; }
+            set { direccionRemitente = value; }
         }
 
-        public string Departamento
+        public string DireccionDestinatario
         {
-            get { return departamento; }
-            set { departamento = value; }
+            get { return direccionDestinatario; }
+            set { direccionDestinatario = value; }
+        }
+
+        public string CiudadRemitente
+        {
+            get { return ciudadRemitente; }
+            set { ciudadRemitente = value; }
+        }
+
+        public string CiudadDestinatario
+        {
+            get { return ciudadDestinatario; }
+            set { ciudadDestinatario = value; }
+        }
+
+        public string DepartamentoRemitente
+        {
+            get { return departamentoRemitente; }
+            set { departamentoRemitente = value; }
         }
 
         public string CodigoPostalRemitente
@@ -89,10 +123,10 @@ namespace AppServicioEntregaDePaquetes.Modelo
         ///</summary>
         ///
             this.codigo = "1.234.567.890";
-            this.nombre = "Nombre De La Persona";
-            this.direccion = "Direccion del Destinatario";
-            this.ciudad = "Ciudad Destino";
-            this.departamento = "Despartamento Destino";
+            this.nombreRemitente = "Nombre De La Persona";
+            this.direccionRemitente = "Direccion del Destinatario";
+            this.ciudadRemitente = "Ciudad Destino";
+            this.departamentoRemitente = "Despartamento Destino";
             this.codigoPostalRemitente = "Código postal Remitente";
             this.codigoPostalDestinatario = "Código Postal Destinatario";
             this.peso = 0.0;
@@ -106,10 +140,10 @@ namespace AppServicioEntregaDePaquetes.Modelo
         ///
         public Package(string codigo, string nombre, string direccion, string ciudad, string departamento, string codigoPostalRemitente,string codigoPostalDestinatario, double peso, double costoPorGr, double valorTotal) {
             this.codigo = codigo;
-            this.nombre = nombre;
-            this.direccion = direccion;
-            this.ciudad = ciudad;
-            this.departamento = departamento;
+            this.nombreRemitente = nombre;
+            this.direccionRemitente = direccion;
+            this.ciudadRemitente = ciudad;
+            this.departamentoRemitente = departamento;
             this.codigoPostalRemitente = codigoPostalRemitente;
             this.codigoPostalDestinatario = codigoPostalDestinatario;
             this.peso = peso;
@@ -124,10 +158,10 @@ namespace AppServicioEntregaDePaquetes.Modelo
         public override string ToString()
         {
             return "Codigo:  " + this.codigo + "\n" +
-                     "Nombre: " + this.nombre + "\n" +
-                     "Direccion Destino: " + this.direccion + "\n" +
-                     "Ciudad Destino: " + this.ciudad + "\n" +
-                     "Departamento: " + this.departamento + "\n" +
+                     "Nombre: " + this.nombreRemitente + "\n" +
+                     "Direccion Destino: " + this.direccionRemitente + "\n" +
+                     "Ciudad Destino: " + this.ciudadRemitente + "\n" +
+                     "Departamento: " + this.departamentoRemitente + "\n" +
                      "Codigo Postal del Remitente: " + this.codigoPostalRemitente + "\n" +
                      "Codigo Postal del Destinanatio: " + this.codigoPostalDestinatario + "\n" +
                      "Peso: " + this.peso + "Kg" + "\n" +
@@ -140,10 +174,10 @@ namespace AppServicioEntregaDePaquetes.Modelo
             Package p = (Package)obj;
             bool result = false;
             if ((this.codigo == p.codigo) &&
-                (this.nombre == p.nombre) &&
-                (this.direccion == p.direccion) &&
-                (this.ciudad == p.ciudad) &&
-                (this.departamento == p.departamento) &&
+                (this.nombreRemitente == p.nombreRemitente) &&
+                (this.direccionRemitente == p.direccionRemitente) &&
+                (this.ciudadRemitente == p.ciudadRemitente) &&
+                (this.departamentoRemitente == p.departamentoRemitente) &&
                 (this.codigoPostalRemitente == p.codigoPostalRemitente) &&
                 (this.codigoPostalDestinatario == p.codigoPostalDestinatario))
                 result = true;
