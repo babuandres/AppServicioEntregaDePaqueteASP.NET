@@ -117,10 +117,14 @@ namespace AppServicioEntregaDePaquetes.Modelo
         ///</summary>
         ///
             this.codigo = "1.234.567.890";
-            this.nombreRemitente = "Nombre De La Persona";
-            this.direccionRemitente = "Direccion del Destinatario";
-            this.ciudadRemitente = "Ciudad Destino";
-            this.departamentoRemitente = "Despartamento Destino";
+            this.nombreRemitente = "Nombre De La Persona que Remite";
+            this.nombreDestinatario = "Nombre de la Persona que Recibe";
+            this.direccionRemitente = "Direccion del Remitente";
+            this.direccionDestinatario = "Direccion de la Persona que recibe";
+            this.ciudadRemitente = "Ciudad de donde se Envía";
+            this.ciudadDestinatario = "Ciudad hacia donde se envía";
+            this.departamentoRemitente = "Departamento Remitente";
+            this.departamentoDestinatario = "Departamento donde se Recibe";
             this.codigoPostalRemitente = "Código postal Remitente";
             this.codigoPostalDestinatario = "Código Postal Destinatario";
             this.peso = 0.0;
