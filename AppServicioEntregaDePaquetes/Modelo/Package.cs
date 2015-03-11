@@ -10,25 +10,13 @@ namespace AppServicioEntregaDePaquetes.Modelo
         #region "Atributos"
         private string codigo;       
         private string nombreRemitente;
-        private string nombreDestinatario;
-
-        
+        private string nombreDestinatario;        
         private string direccionRemitente;
-        private string direccionDestinatario;
-
-        
+        private string direccionDestinatario;        
         private string ciudadRemitente;
-        private string ciudadDestinatario;
-
-        
+        private string ciudadDestinatario;        
         private string departamentoRemitente;
-        private string departamentoDestinatario;
-
-        public string DepartamentoDestinatario
-        {
-            get { return departamentoDestinatario; }
-            set { departamentoDestinatario = value; }
-        }
+        private string departamentoDestinatario;        
         private string codigoPostalRemitente;        
         private string codigoPostalDestinatario;
         private double peso;          
@@ -83,6 +71,12 @@ namespace AppServicioEntregaDePaquetes.Modelo
         {
             get { return departamentoRemitente; }
             set { departamentoRemitente = value; }
+        }
+
+        public string DepartamentoDestinatario
+        {
+            get { return departamentoDestinatario; }
+            set { departamentoDestinatario = value; }
         }
 
         public string CodigoPostalRemitente
